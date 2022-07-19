@@ -6,9 +6,9 @@ Kirby::plugin('medienbaecker/redirect', [
       'computed' => [
         'redirect' => function () {
           if($this->model()->parent()) {
-            return $this->model()->parent()->panelUrl();	
+            return $this->model()->parent()->panel()->url();	
           }
-          return $this->model()->site()->panelUrl();	
+          return $this->model()->site()->panel()->url();	
         }
       ]
     ]
